@@ -1,0 +1,5 @@
+board:
+  name: ContinuousBiosensing
+  vendor: VRG
+  socs:
+    - name: nrf52840

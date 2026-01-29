@@ -1,0 +1,10 @@
+identifier: ContinuousBiosensing/nrf52840
+name: Wireless potentiostat for continuously detecting analyte 
+vendor: VRG
+type: mcu
+arch: arm
+ram: 256
+flash: 1024
+toolchain:
+  - zephyr
+supported: []
