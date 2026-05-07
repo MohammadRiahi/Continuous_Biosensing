@@ -12,6 +12,11 @@
 		zephyr,code-partition = &slot0_partition;
 	};
 
+	 zephyr,user {
+        io-channels = <&adc 2>, <&adc 7>;
+		measure-timing-gpios = <&gpio0 19 0>;  // Use P0.19
+    };
+
 	leds {
 		compatible = "gpio-leds";
 		leds_0: led_0 {
@@ -78,6 +83,15 @@
 		zephyr,input-positive = <NRF_SAADC_AIN2>; /* P0.04 */
 		zephyr,resolution = <12>;
 	};
+	channel@7 {
+		reg = <7>;
+		zephyr,gain = "ADC_GAIN_1_6";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,input-positive = <NRF_SAADC_AIN7>; /* P0.31 */
+		zephyr,resolution = <12>;
+	};
+	
 };
 
 
