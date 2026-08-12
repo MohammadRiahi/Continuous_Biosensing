@@ -31,6 +31,7 @@
 
 	zephyr,user {
 		power_on-gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
+		neg-ldo-gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;
 		io-channels = <&adc 2>, <&adc 7>;
 	};
 };
@@ -74,7 +75,7 @@
 	status = "okay";
 	#address-cells = <1>;
 	#size-cells = <0>;
-	
+
 	channel@2 {
 		reg = <2>;
 		zephyr,gain = "ADC_GAIN_1_6";
